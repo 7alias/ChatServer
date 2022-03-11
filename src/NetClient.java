@@ -2,7 +2,6 @@ import java.awt.Color;
 import java.awt.Insets;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
-import java.io.Console;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
@@ -23,12 +22,12 @@ public class NetClient extends JFrame implements KeyListener {
     PrintWriter out;
 
     NetClient() {
-        // Создаем окно
+        // Create window:
         super("Simple Chat client");
         setSize(400, 500);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
 
-        // Добавляем на окно текстовое поле
+        // Add textfield on window
         textArea = new JTextArea();
         textArea.setBackground(Color.BLACK);
         textArea.setForeground(Color.WHITE);
@@ -37,7 +36,7 @@ public class NetClient extends JFrame implements KeyListener {
         scrollPane = new JScrollPane(textArea);
         this.add(scrollPane);
 
-        // Подсоединяемся к серверу
+        // Connecting to server:
 
         connect();
 
