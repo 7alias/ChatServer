@@ -42,7 +42,7 @@ public class ChatServer {
     }
 
     /**
-     * Delivers a message from one user to others (broadcasting)
+     * broadcasting message
      */
     void broadcast(String message, UserThread excludeUser) {
         for (UserThread aUser : userThreads) {
@@ -75,7 +75,7 @@ public class ChatServer {
     }
 
     /**
-     * Returns true if there are other users connected (not count the currently connected user)
+     * Returns true if there are other users connected
      */
     boolean hasUsers() {
         return !this.userNames.isEmpty();

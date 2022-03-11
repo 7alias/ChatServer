@@ -49,7 +49,7 @@ public class UserThread extends Thread {
     }
 
     /**
-     * Sends a list of online users to the newly connected user.
+     * Sends a list of online users to the new user.
      */
     void printUsers() {
         if (server.hasUsers()) {
